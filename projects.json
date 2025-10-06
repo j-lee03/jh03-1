@@ -1,12 +1,12 @@
 [
-  {
-    "title": "2025 광복절행사",
-    "desc": "음향시스템 총괄및 운용",
-    "image": "/static/images/광복절.jpg",
-    "main": true,
-    "mini1" : "/static/images/광복절2.jpeg",
-    "mini2" : "/static/images/project1-2.png",
-    "mini3" : "/static/images/project1-3.png"
+{
+  "title": "2025 광복절행사",
+  "desc": "...",
+  "image": "...",
+  "main": true,
+  "mini1" : "...",
+  "mini2" : "...",
+  "mini3" : "..."
   },
   {
     "title": "Focuz",
