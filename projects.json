@@ -1,10 +1,10 @@
 [
   {
-    "title": "Sussyoo",
-    "desc": "웹 서비스 백엔드 개발 · 로그인 기능 구현 담당",
-    "image": "/static/images/project1.png",
+    "title": "2025 광복절행사",
+    "desc": "음향시스템 총괄및 운용",
+    "image": "광복절.jpg",
     "main": true,
-    "mini1" : "/static/images/project1-1.png",
+    "mini1" : "광복절2.jpeg",
     "mini2" : "/static/images/project1-2.png",
     "mini3" : "/static/images/project1-3.png"
   },
