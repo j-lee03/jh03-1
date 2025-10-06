@@ -1,13 +1,13 @@
 [
 {
   "title": "2025 광복절행사",
-  "desc": "...",
-  "image": "...",
+  "desc": "인증시스템 총괄및 운영",
+  "image": "/static/images/광복절.jpg",
   "main": true,
-  "mini1" : "...",
-  "mini2" : "...",
-  "mini3" : "..."
-  },
+  "mini1": "/static/images/광복절mini1.jpeg",
+  "mini2": "/static/images/광복절mini2.jpeg",
+  "mini3": ""
+},
   {
     "title": "Focuz",
     "desc": "모바일 앱 백엔드 개발 · 수면 인지 테스트 모듈 담당",
