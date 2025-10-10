@@ -7,14 +7,9 @@ from fastapi.templating import Jinja2Templates
 from pathlib import Path
 
 router = APIRouter()
+
+# 현재 파일 위치를 기준으로 프로젝트 루트 경로(BASE_DIR)를 계산
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
+# 프로젝트 루트 아래에 있는 'templates' 폴더를 절대 경로로 지정
 templates = Jinja2Templates(directory=str(Path(BASE_DIR, 'templates')))
-
-
-@router.get("/about", response_class=HTMLResponse)
-async def about(request: Request):
-    with open(BASE_DIR.parent / "projects.json", "r", encoding="utf-8") as f:
-        projects = json.load(f)
-    return templates.TemplateResponse(
-        "about.html", {"request": request, "projects": projects}
-    )
