@@ -1,16 +1,103 @@
-/* 1. 메뉴바 바탕 줄이기 (너비 90%로 설정하고 가운데 정렬) */
-.navbar {
-    max-width: 70%; /* 화면 너비의 90%를 최대 너비로 설정 */
-    margin: 1rem auto; /* 위아래 간격을 1rem 주고, 좌우는 auto로 설정하여 가운데 정렬 */
-    border-radius: 8px; /* 모서리를 살짝 둥글게 */
+/* --- 전체 디자인을 위한 기본 설정 --- */
+
+:root {
+  /* 라이트 모드 기본 색상 */
+  --bg-color-light: #f8f9fa;
+  --text-color-light: #212529;
+  --card-bg-light: #ffffff;
+  --subtle-border-light: #dee2e6;
+
+  /* 다크 모드 기본 색상 */
+  --bg-color-dark: #121212;
+  --text-color-dark: #e9ecef;
+  --card-bg-dark: #1e1e1e;
+  --subtle-border-dark: #343a40;
 }
 
-/* 2. 메뉴바 글자(링크) 상하로 만들기 */
+body {
+  /* 깔끔하고 가독성 좋은 시스템 폰트 사용 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* 테마 변경 시 부드러운 전환 효과 */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- 라이트/다크 모드 색상 적용 --- */
+
+/* 라이트 모드 */
+[data-bs-theme='light'] {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+/* 다크 모드 */
+[data-bs-theme='dark'] {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+
+/* --- 타이포그래피 (글자 스타일) --- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300; /* 제목 폰트를 살짝 가볍게 */
+  letter-spacing: -1px; /* 글자 간격 살짝 좁게 */
+}
+
+
+/* --- 메뉴바 스타일 --- */
+
+.navbar {
+    max-width: 95%; /* 너비를 화면의 95%로 설정 */
+    margin: 1rem auto;
+    border-radius: 8px;
+    border: 1px solid transparent; /* 테두리 없애기 */
+    box-shadow: none; /* 그림자 없애기 */
+}
+
 .navbar-nav .nav-link {
-    writing-mode: vertical-rl; /* 글자를 세로쓰기 모드로 변경 */
+    writing-mode: vertical-rl;
     text-orientation: mixed;
-    padding-top: 1rem; /* 위쪽 여백 추가 */
-    padding-bottom: 1rem; /* 아래쪽 여백 추가 */
-    margin: 0 1rem; /* 메뉴 아이템 사이 좌우 간격 추가 */
-    text-align: center; /* 세로쓰기 된 글자를 가운데 정렬 */
+    padding: 1rem 0.5rem;
+    margin: 0 0.5rem;
+    text-align: center;
+    font-weight: 300; /* 메뉴 글자도 가볍게 */
+}
+
+
+/* --- 프로젝트 포트폴리오 카드 스타일 --- */
+
+#portfolio .carousel-item {
+  /* 카드 테두리 제거 */
+  border: none;
+  background-color: transparent;
+}
+
+/* 카드 내부 스타일 */
+#portfolio .card-body {
+    padding: 2rem;
+}
+
+/* 라이트 모드 카드 배경 */
+[data-bs-theme='light'] #portfolio .card-body {
+    background-color: var(--card-bg-light);
+    border: 1px solid var(--subtle-border-light);
+    border-radius: 8px;
+}
+
+/* 다크 모드 카드 배경 */
+[data-bs-theme='dark'] #portfolio .card-body {
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--subtle-border-dark);
+    border-radius: 8px;
+}
+
+
+/* --- 버튼 스타일 --- */
+
+.btn-primary {
+    border-radius: 30px; /* 버튼을 더 둥글게 */
+    padding: 0.75rem 1.5rem; /* 버튼 여백 늘리기 */
+    font-weight: bold;
+    border: none; /* 테두리 제거 */
 }
