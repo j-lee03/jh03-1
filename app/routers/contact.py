@@ -6,14 +6,14 @@ from email.mime.text import MIMEText
 from fastapi import APIRouter, Form, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+from pathlib import Path
 
 from app.core.config import settings
 
 router = APIRouter()
 
-BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
-templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
-
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+templates = Jinja2Templates(directory=str(Path(BASE_DIR, 'templates')))
 
 # ===== Contact Form (GET) =====
 @router.get("/contact", response_class=HTMLResponse)
