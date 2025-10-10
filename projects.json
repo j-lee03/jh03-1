@@ -1,29 +1,34 @@
 [
-{
-  "title": "2025 광복절행사",
-  "desc": "인증시스템 총괄및 운영",
-  "image":"/static/images/광복절.jpg",
-  "main": true,
-  "mini1":"/static/images/광복절1.jpg",
-  "mini2":"/static/images/광복절2.jpeg",
-  "mini3": ".."
-},
+  {
+    "title": "2025 광복절행사",
+    "desc": "인증시스템 모듈화 구현",
+    "image": "광복절1.jpeg",
+    "main": true,
+    "link": "광복절2.jpeg",
+    "skills": "Python, Flask, JavaScript"
+  },
   {
     "title": "2025 개천절행사",
     "desc": "음향 파트 담당 및 시스템 운영",
-    "image":"/static/images/개천절.jpg",
+    "image": "개천절.jpeg",
     "main": true,
-    "mini1" : "..",
-    "mini2" : "..",
-    "mini3" : ".."
+    "link": "..",
+    "skills": ".."
   },
   {
-    "title": "",
-    "desc": "",
+    "title": "..",
+    "desc": "프로젝트에 대한 간단한 설명입니다.",
     "image": "..",
-    "main": true,
-    "mini1" : "..",
-    "mini2" : "..",
-    "mini3" : ".."
+    "main": false,
+    "link": "..",
+    "skills": ".."
+  },
+  {
+    "title": "..",
+    "desc": "..",
+    "image": "..",
+    "main": false,
+    "link": "..",
+    "skills": ".."
   }
 ]
