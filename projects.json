@@ -18,12 +18,12 @@
     "mini3" : ""
   },
   {
-    "title": "CJcus",
-    "desc": "윈도우 프로그램 개발 · 메일 전송 및 거래명세서 기능 전담",
-    "image": "static/images/project3.jpg",
+    "title": "",
+    "desc": "",
+    "image": "",
     "main": true,
-    "mini1" : "/static/images/project3-1.png",
-    "mini2" : "/static/images/project3-2.png",
-    "mini3" : "/static/images/project3-3.png"
+    "mini1" : "",
+    "mini2" : "",
+    "mini3" : ""
   }
 ]
