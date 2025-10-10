@@ -2,7 +2,7 @@ import json
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-
+from pathlib import Path
 # FastAPI 앱 생성
 app = FastAPI()
 
@@ -15,7 +15,8 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 # projects.json 파일에서 프로젝트 데이터 불러오기
-with open('projects.json', 'r', encoding='utf-8') as f:
+BASE_DIR = Path(__file__).resolve().parent
+with open(BASE_DIR / 'projects.json', 'r', encoding='utf-8') as f:
     projects_data = json.load(f)
 
 # 루트 URL ("/") 접속 시 home.html 템플릿을 렌더링
