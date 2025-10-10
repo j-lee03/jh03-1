@@ -1,19 +1,15 @@
 import pathlib
-
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
+# from app.routers import home, projects # 만약 라우터 파일이 있다면 주석 해제
 
-from app.routers import about, contact, home, projects
-from fastapi.staticfiles import StaticFiles
 app = FastAPI()
-BASE_DIR = pathlib.Path(__file__).resolve().parent
 
-# 정적 파일 제공
-app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")
+# static 폴더를 FastAPI 앱에 연결하는 올바른 코드
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# 라우터 등록
-app.include_router(home.router)
-app.include_router(projects.router)
-app.include_router(about.router)
-app.include_router(contact.router)
+# 라우터들을 앱에 포함시키는 코드
+# app.include_router(home.router)
+# app.include_router(projects.router)
 
+# 참고: templates 폴더 렌더링은 각 라우터 파일 안에서 처리해야 합니다.
