@@ -2,28 +2,28 @@
 {
   "title": "2025 광복절행사",
   "desc": "인증시스템 총괄및 운영",
-  "image": "/static/images/광복절.jpg",
+  "image":"/static/images/광복절.jpg",
   "main": true,
-  "mini1": "/static/images/광복절1.jpg",
-  "mini2": "/static/images/광복절2.jpeg",
-  "mini3": ""
+  "mini1":"/static/images/광복절1.jpg",
+  "mini2":"/static/images/광복절2.jpeg",
+  "mini3": ".."
 },
   {
     "title": "2025 개천절행사",
     "desc": "음향 파트 담당 및 시스템 운영",
-    "image": "/static/images/개천절.jpg",
+    "image":"/static/images/개천절.jpg",
     "main": true,
-    "mini1" : "",
-    "mini2" : "",
-    "mini3" : ""
+    "mini1" : "..",
+    "mini2" : "..",
+    "mini3" : ".."
   },
   {
     "title": "",
     "desc": "",
-    "image": "",
+    "image": "..",
     "main": true,
-    "mini1" : "",
-    "mini2" : "",
-    "mini3" : ""
+    "mini1" : "..",
+    "mini2" : "..",
+    "mini3" : ".."
   }
 ]
