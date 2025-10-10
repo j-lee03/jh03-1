@@ -1,0 +1,16 @@
+/* 1. 메뉴바 바탕 줄이기 (너비 90%로 설정하고 가운데 정렬) */
+.navbar {
+    max-width: 90%; /* 화면 너비의 90%를 최대 너비로 설정 */
+    margin: 1rem auto; /* 위아래 간격을 1rem 주고, 좌우는 auto로 설정하여 가운데 정렬 */
+    border-radius: 8px; /* 모서리를 살짝 둥글게 */
+}
+
+/* 2. 메뉴바 글자(링크) 상하로 만들기 */
+.navbar-nav .nav-link {
+    writing-mode: vertical-rl; /* 글자를 세로쓰기 모드로 변경 */
+    text-orientation: mixed;
+    padding-top: 1rem; /* 위쪽 여백 추가 */
+    padding-bottom: 1rem; /* 아래쪽 여백 추가 */
+    margin: 0 1rem; /* 메뉴 아이템 사이 좌우 간격 추가 */
+    text-align: center; /* 세로쓰기 된 글자를 가운데 정렬 */
+}
