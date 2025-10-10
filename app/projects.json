@@ -2,15 +2,15 @@
   {
     "title": "2025 광복절행사",
     "desc": "인증시스템 모듈화 구현",
-    "image": "광복절.jpg",
+    "image": "gwangbok.jpg",
     "main": true,
-    "link": "광복절2.jpeg",
+    "link": "gwangbok2.jpeg",
     "skills": "Python, Flask, JavaScript"
   },
   {
     "title": "2025 개천절행사",
     "desc": "음향 파트 담당 및 시스템 운영",
-    "image": "개천절.jpg",
+    "image": "gaecheon.jpg",
     "main": true,
     "link": "..",
     "skills": ".."
