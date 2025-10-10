@@ -1,7 +1,8 @@
 import pathlib
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-# from app.routers import home, projects # 만약 라우터 파일이 있다면 주석 해제
+from app.routers import home, projects
+# 만약 라우터 파일이 있다면 주석 해제
 
 app = FastAPI()
 
