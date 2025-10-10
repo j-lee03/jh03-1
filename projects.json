@@ -9,13 +9,13 @@
   "mini3": ""
 },
   {
-    "title": "Focuz",
-    "desc": "모바일 앱 백엔드 개발 · 수면 인지 테스트 모듈 담당",
-    "image": "static/images/project2.png",
+    "title": "2025 개천절행사",
+    "desc": "음향 파트 담당 및 시스템 운영",
+    "image": "",
     "main": true,
-    "mini1" : "/static/images/project2-1.png",
-    "mini2" : "/static/images/project2-2.png",
-    "mini3" : "/static/images/project2-3.png"
+    "mini1" : "",
+    "mini2" : "",
+    "mini3" : ""
   },
   {
     "title": "CJcus",
