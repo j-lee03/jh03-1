@@ -5,7 +5,6 @@ from fastapi.staticfiles import StaticFiles
 
 from app.routers import about, contact, home, projects
 
-from fastapi.staticfiles import StaticFiles
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 BASE_DIR = pathlib.Path(__file__).resolve().parent
