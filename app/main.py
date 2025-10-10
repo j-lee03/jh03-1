@@ -2,6 +2,7 @@ import pathlib
 
 import app
 from app.routers import home, about, contact, projects
+from app.routers import home, about, contact, projects
 
 # ...
 
