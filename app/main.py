@@ -4,10 +4,12 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
 from app.routers import about, contact, home, projects
+
 from fastapi.staticfiles import StaticFiles
 app = FastAPI()
-BASE_DIR = pathlib.Path(__file__).resolve().parent
 app.mount("/static", StaticFiles(directory="static"), name="static")
+BASE_DIR = pathlib.Path(__file__).resolve().parent
+
 # 정적 파일 제공
 app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")
 
