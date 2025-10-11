@@ -1,83 +1,127 @@
+/* --- 전체 디자인을 위한 기본 설정 --- */
+
+:root {
+  --bg-color-light: #f8f9fa;
+  --text-color-light: #000000;
+  --card-bg-light: #ffffff;
+  --subtle-border-light: #dee2e6;
+
+  --bg-color-dark: #121212;
+  --text-color-dark: #ffffff;
+  --card-bg-dark: #1e1e1e;
+  --subtle-border-dark: #343a40;
+}
+
 body {
-  background-color: #f0f8ff;
-  font-family: "Segoe UI", sans-serif;
-  display: flex;
-  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.sidebar {
-  width: 250px;
-  background: #00acc1;
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
+/* --- 라이트/다크 모드 색상 적용 --- */
+
+[data-bs-theme='light'] {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
 }
 
-.sidebar img {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  margin-bottom: 20px;
-  object-fit: cover;
+[data-bs-theme='dark'] {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1) grayscale(100);
+
+/* --- 타이포그래피 (글자 스타일) --- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  letter-spacing: -1px;
 }
 
-.sidebar h2 {
-  margin-bottom: 20px;
-  font-weight: bold;
+
+/* --- 메뉴바 스타일 (수정된 부분) --- */
+
+.navbar {
+    max-width: 95%;
+    margin: 1rem auto;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* 부드러운 전환 효과 추가 */
+    border: 1px solid;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* 은은한 그림자 추가 */
 }
 
-.nav-link {
-  color: #e8f5e9 !important;
-  margin: 5px 0;
-  transition: all 0.3s ease;
+/* 라이트 모드 메뉴바 */
+[data-bs-theme='light'] .navbar {
+    background-color: var(--card-bg-light); /* 카드와 동일한 흰색 배경 */
+    border-color: var(--subtle-border-light); /* 옅은 회색 테두리 */
+}
+[data-bs-theme='light'] .navbar-brand,
+[data-bs-theme='light'] .navbar-nav .nav-link {
+    color: var(--text-color-light); /* 검은색 글자 */
 }
 
-.nav-link:hover {
-  background-color: #00838f;
-  color: #ffffff !important;
-  border-radius: 8px;
-  padding-left: 10px;
+/* 다크 모드 메뉴바 */
+[data-bs-theme='dark'] .navbar {
+    background-color: var(--card-bg-dark); /* 카드와 동일한 어두운 배경 */
+    border-color: var(--subtle-border-dark); /* 좀 더 어두운 테두리 */
+}
+[data-bs-theme='dark'] .navbar-brand,
+[data-bs-theme='dark'] .navbar-nav .nav-link {
+    color: var(--text-color-dark); /* 흰색 글자 */
 }
 
-.nav-link:active {
-  transform: scale(0.97);
-  background-color: #006064;
+.navbar-nav .nav-link {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 1rem 0.5rem;
+    margin: 0 0.5rem;
+    text-align: center;
+    font-weight: 300;
 }
 
-.content {
-  flex: 1;
-  padding: 40px;
+
+/* --- 프로젝트 포트폴리오 카드 스타일 --- */
+
+#portfolio .carousel-item {
+  border: none;
+  background-color: transparent;
 }
 
-.hero {
-  background: linear-gradient(135deg, #81d4fa, #aed581);
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-  border-radius: 12px;
+#portfolio .card-body {
+    padding: 2rem;
+    background-color: var(--card-bg-light);
+    border: 1px solid var(--subtle-border-light);
+    border-radius: 8px;
 }
 
-.roles {
-  font-size: 1.2rem;
-  color: #eee;
-  text-align: center;
+[data-bs-theme='dark'] #portfolio .card-body {
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--subtle-border-dark);
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
+
+/* --- 버튼 스타일 --- */
+
+.btn-primary {
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: none;
 }
 
-.card-img-top {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+/* --- 모바일 화면을 위한 반응형 디자인 --- */
+@media (max-width: 768px) {
+  .navbar {
+    max-width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .navbar-nav .nav-link {
+    writing-mode: horizontal-tb;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    text-align: left;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
 }

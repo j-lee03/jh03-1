@@ -8,8 +8,9 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container"> <a class="navbar-brand" href="{{ url_for('home') }}">현직</a>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">현직</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,7 +26,7 @@
                         <a class="nav-link" href="{{ url_for('contact_page') }}">연락처</a>
                     </li>
                 </ul>
-                <button id="theme-switcher" class="btn btn-outline-light ms-auto btn-sm">테마 변경</button>
+                <button id="theme-switcher" class="btn btn-outline-secondary ms-auto btn-sm">테마 변경</button>
             </div>
         </div>
     </nav>
@@ -42,20 +43,16 @@
         const themeSwitcherButton = document.getElementById('theme-switcher');
         const htmlElement = document.documentElement;
 
-        // 테마를 설정하고, 사용자의 선택을 브라우저에 저장하는 함수
         function setTheme(theme) {
           htmlElement.setAttribute('data-bs-theme', theme);
-          localStorage.setItem('theme', theme); // localStorage에 테마 저장
+          localStorage.setItem('theme', theme);
         }
 
-        // 1. 사용자가 직접 선택한 테마가 저장되어 있는지 확인
         const savedTheme = localStorage.getItem('theme');
 
         if (savedTheme) {
-          // 저장된 테마가 있으면 그것을 적용
           setTheme(savedTheme);
         } else {
-          // 저장된 테마가 없으면, 시간에 따라 자동으로 설정
           const currentHour = new Date().getHours();
           if (currentHour >= 6 && currentHour < 18) {
             setTheme('light');
@@ -64,7 +61,6 @@
           }
         }
 
-        // 2. 버튼 클릭 이벤트 처리
         themeSwitcherButton.addEventListener('click', () => {
           const currentTheme = htmlElement.getAttribute('data-bs-theme');
           const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
