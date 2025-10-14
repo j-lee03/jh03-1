@@ -1,10 +1,10 @@
 [
   {
     "title": "2025 광복절행사",
-    "desc": "음향 시스템 총괄 및 운영",
+    "desc": "인증시스템 모듈화 구현",
     "image": "gwangbok.jpg",
     "main": true,
-    "link": "gwangbok2.jpeg",
+    "link": "gwangbok_link.jpg",
     "skills": "Python, Flask, JavaScript"
   },
   {
@@ -17,17 +17,17 @@
   },
   {
     "title": "2025년 양산 삽량문화축전 (지역 대표 축제)",
-    "desc": " 메인 스테이지 음향 감독 및 오퍼레이팅.",
+    "desc": "메인스테이지 음향 총괄 및 무대 오퍼레이팅",
     "image": "sabyang.jpeg",
     "main": true,
     "link": "..",
     "skills": ".."
   },
   {
-    "title": "..",
-    "desc": "..",
-    "image": "..",
-    "main": false,
+    "title": "경주apec",
+    "desc": "1부기념식총괄",
+    "image": ". .",
+    "main": true,
     "link": "..",
     "skills": ".."
   }
