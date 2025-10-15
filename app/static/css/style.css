@@ -150,3 +150,28 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.2rem;
   }
 }
+/* --- 경력 강조를 위한 스타일 --- */
+
+.highlight-item {
+  /* 글자 색상을 사이트의 기본 파란색으로 변경 */
+  color: #0d6efd;
+
+  /* 글자를 살짝 더 굵게 (보통은 400) */
+  font-weight: 500;
+
+  /* 눈에 띄도록 아주 옅은 파란색 배경 추가 */
+  background-color: rgba(13, 110, 253, 0.05);
+
+  /* 안쪽 여백과 둥근 모서리 추가 */
+  padding: 10px;
+  border-radius: 6px;
+
+  /* 다른 항목과 간격 조정 */
+  margin-bottom: 10px;
+}
+
+/* 다크 모드일 때는 강조 색상을 더 밝게 변경 */
+[data-bs-theme='dark'] .highlight-item {
+    color: #6ea8ff; /* 더 밝은 파란색 */
+    background-color: rgba(110, 168, 255, 0.1); /* 더 밝은 배경 */
+}
