@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Projects - {% endblock %}
+{% block title %}Projects - 현직{% endblock %}
 
 {% block content %}
 <style>
   .card-img-top {
     width: 100%;
     height: 300px;
-    object-fit: contain; /* fit image without cropping */
-    background-color: #f8f9fa; /* fill empty space */
+    object-fit: contain;
+    background-color: #f8f9fa;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
   }
@@ -46,7 +46,7 @@
     width: 5%;
   }
   .carousel-control-prev {
-    left: 220px; /* adjust to be fully inside sidebar */
+    left: 220px;
   }
   .connector-line {
     width: 2px;
@@ -64,17 +64,17 @@
           {% for main_project in projects %}
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <img src="{{ main_project.image }}" class="card-img-top" alt="{{ main_project.title }}">
+              <img src="/static/images/{{ main_project.image }}" class="card-img-top" alt="{{ main_project.title }}">
               <div class="card-body">
                 <h3 class="card-title">{{ main_project.title }}</h3>
-                <p class="card-text">{{ main_project["desc"] }}</p>
+                <p class="card-text">{{ main_project["desc"] | safe }}</p>
               </div>
             </div>
             <div class="connector-line"></div>
             <div class="subproject-wrapper">
               <div class="d-flex justify-content-center">
                 {% for key in ['mini1','mini2','mini3'] %}
-                  <img src="{{ main_project[key] or 'static/images/preparing.png' }}" class="subproject-img" alt="{{ key }}" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="document.getElementById('modalImage').src='{{ main_project[key] or 'static/images/preparing.png' }}'">
+                  <img src="/static/images/{{ main_project[key] or 'preparing.png' }}" class="subproject-img" alt="{{ key }}" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="document.getElementById('modalImage').src='/static/images/{{ main_project[key] or 'preparing.png' }}'">
                 {% endfor %}
               </div>
             </div>
