@@ -16,7 +16,7 @@
         {% for project in projects if project.main %}
         <div class="carousel-item {% if loop.first %}active{% endif %}">
           <div class="card shadow-lg mx-auto" style="max-width:700px;">
-            <img src="{{ url_for('static', filename='images/' + project.image) }}" class="card-img-top" alt="{{ project.title }}">
+            <img src="/static/images/{{ project.image }}" class="card-img-top" alt="{{ project.title }}">
             <div class="card-body text-center">
               <h4 class="card-title">{{ project.title }}</h4>
               <p class="card-text text-muted">{{ project.desc | safe }}</p>
