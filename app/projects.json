@@ -2,7 +2,7 @@
   {
     "title": "2025 광복절행사",
     "desc": "음향 시스템 총괄 및 운영",
-    "image": "gwangbok.jpg",
+    "image": "gwangbok.png",
     "main": true,
     "link": "gwangbok_link.png",
     "skills": "Python, Flask, JavaScript"
